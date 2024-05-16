@@ -1,0 +1,147 @@
+/** @format */
+
+:root {
+	--purewhite: #ffffff;
+	--cream: #f2eae2;
+	--gray: #6c7289;
+	--aquamarine: #3d8168;
+	--dkaquamarine: #1a4032;
+	--dkgray: #1c232b;
+
+	--base-size: 0.875rem;
+	--display: 2rem;
+	--body: var(--base-size);
+	--button: var(--base-size);
+	--overline: 0.75rem;
+
+	--serif: "Fraunces", serif;
+	--sans-serif: "Montserrat", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--cream);
+}
+h1,
+h2,
+p {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	color: var(--aquamarine);
+}
+h2 {
+	color: var(--dkaquamarine);
+}
+p,
+h1 {
+	font-family: var(--sans-serif);
+}
+main p {
+	color: var(--gray);
+	margin-bottom: 1.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+img {
+	margin-bottom: 1.5rem;
+}
+h1 {
+	font-size: var(--overline);
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 0.3em;
+	margin-bottom: 0.75rem;
+}
+h2 {
+	font-family: var(--serif);
+	font-size: var(--display);
+	line-height: 0.9;
+	margin-bottom: 1rem;
+}
+main {
+	padding: 0 1.5rem;
+}
+img {
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+button {
+	width: 100%;
+	height: 3rem;
+	bottom: 1.5rem;
+	background-color: var(--aquamarine);
+	border: none;
+	color: var(--purewhite);
+	font-size: 0.875rem;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 10px;
+}
+button:hover {
+	background-color: var(--dkaquamarine);
+	cursor: pointer;
+}
+footer p {
+	margin-top: 1rem;
+}
+footer a:hover {
+	text-decoration: none;
+}
+.wrapper {
+	background-color: var(--purewhite);
+	max-width: 21.438rem;
+	min-width: 21.438rem;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-bottom: 1.5rem;
+}
+.price {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.newprice {
+	font-family: var(--serif);
+	color: var(--aquamarine);
+	font-size: var(--display);
+	font-weight: bold;
+	margin-right: 1.188rem;
+}
+.oldprice {
+	text-decoration: line-through;
+	color: var(--gray);
+	font-family: var(--sans-serif);
+	font-size: 0.813rem;
+}
+
+@media (min-width: 50rem) {
+	.wrapper {
+		max-width: 37.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 0;
+	}
+	img {
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px 0 0 10px;
+	}
+	main {
+		margin: 1.5rem 0;
+	}
+}
